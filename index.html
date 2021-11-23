@@ -35,6 +35,47 @@
             </div>
         </nav>
 
+     <!-- MAIN / HEADER -->
+        <main>
+            <div class="main-container">
+                <a href="shop.html">
+                    <div class="main-text">
+                        <h1>Lorem ipsum dolor sit amet, consectet</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id sit ultrices tincidunt sollicitudin fermentum arcu.</p>
+                            <div class="arrow-button">
+                                <p>Shop</p>
+                                    <div>
+                                        <svg width="90" height="16" viewBox="0 0 90 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M89.7071 8.70711C90.0976 8.31659 90.0976 7.68343 89.7071 7.2929L83.3431 0.928939C82.9526 0.538415 82.3195 0.538415 81.9289 0.928939C81.5384 1.31946 81.5384 1.95263 81.9289 2.34315L87.5858 8.00001L81.9289 13.6569C81.5384 14.0474 81.5384 14.6806 81.9289 15.0711C82.3195 15.4616 82.9526 15.4616 83.3431 15.0711L89.7071 8.70711ZM-8.74228e-08 9L89 9.00001L89 7.00001L8.74228e-08 7L-8.74228e-08 9Z" fill="#303531"/>
+                                            </svg>
+                                    </div>
+                            </div>
+                    </div>
+                 </a>
+
+                <div class="main-img">
+                    <img src="images/headerimg.png">
+                </div>
+            </div>
+        </main>
+
+    <!-- SHOP BY CATEGORY -->
+        <div class="category-container">
+            <h2>Shop by category</h2>
+            <div class="category-long">
+                    
+            </div>
+            <div class="category-short-container">
+                <div class="category-short">
+                </div>
+                <div class="category-short">
+                </div>
+            </div>
+        </div>
+
+
+
+
         <!-- JQUERY / JAVASCIPT -->
 
         <!-- Shopping Cart Animation -->
@@ -44,6 +85,7 @@
             $(".nav-cart").hover(function () {
             $(".nav-cart").toggleClass("cart-hover")
             $(".nav-cart object").toggleClass("cart-hover")
+            $(".main-container .main-text .arrow-button div").toggleClass("cart-hover")
           })
         </script>
 
