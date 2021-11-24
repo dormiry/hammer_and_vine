@@ -35,7 +35,7 @@
         font-style: normal;
         font-size: 50px;
         color:#30836A;
-        margin-bottom: 17px;
+        margin-bottom: 10px;
     }
 
     /* Section Title */
@@ -191,26 +191,25 @@ body {
         height: 40px;
     }
 
+
     nav .nav-cart .shopping-bag {
         fill: #303531;
         width: 50%;
     }
 
-    nav .nav-cart:hover, .shopping-bag:hover {
-        animation-name: cart-hover;
-        animation-duration: 0.4s;
+    nav .nav-cart:hover {
+        animation-name: hover;
+        animation-duration: 0.6s;
         animation-fill-mode: forwards;
         cursor: pointer;
     }
       
-      @keyframes cart-hover {
+      @keyframes hover {
         0% {
           background-color: #D1E5CD;
-          fill: #303531;
         }
         100% {
           background-color: #FF8479;
-          fill: #fff;
         }
       }
 
@@ -277,98 +276,210 @@ body {
 
     /* Arrow Button  */
 
-    .arrow-button {
+        .arrow-button {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .arrow-button p {
+            width: fit-content;
+            margin: 0 100px  0 0;
+        }
+
+        .arrow-button div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D1E5CD;
+            border-radius: 30px;
+            width: 40px;
+            height: 40px;
+            margin-top: -3px;
+        }
+
+            
+        .arrow-button:hover div {
+            animation-name: hover;
+            animation-duration: 0.4s;
+            animation-fill-mode: forwards;
+        }
+
+        .arrow-button svg {
+            position: absolute;
+            fill: #303531;
+            margin-left: -75px;
+        }
+
+        .main-img {
+            min-width: 460px;
+            height: 580px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D1E5CD;
+
+        }
+
+        .main-img img {
+            position: absolute;
+            width: 653px;
+            height: 812px;
+            margin: 0 0 -10px 0;
+        }
+
+
+/* HOMEPAGE CONTENT */
+
+    .homepage-content {
+        width: 100%;
         display: flex;
-        flex-flow: row nowrap;
-
-    }
-
-    .arrow-button p {
-        width: fit-content;
-        margin: 0 100px  0 0;
-    }
-
-    .arrow-button div {
-        display: flex;
+        flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        background-color: #D1E5CD;
-        border-radius: 30px;
-        width: 40px;
-        height: 40px;
-        margin-top: -3px;
     }
 
+    /* SHOP CATEGORIES */
+
+        .category-container {
+            width: fit-content;
+            margin-top: 100px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .category-container h2 {
+            position: absolute;
+            margin-top: -45px;
+        }
+
+        .category-link {
+            text-decoration: none;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+        }
+
+        .category-long {
+            background-color: #F6F6F6;
+            width: 477px;
+            height: 433px;
+            overflow: hidden;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .plant-category {
+            width: 186px;
+            height: 402px;
+            margin-left: 100px;
+            background-color: #D1E5CD;
+        }
+
+        .plant-category img {
+            width: 305px;
+            margin: -20px 0 0 -95px;
+            transform: scaleX(-1);
+        }
+
+        .category-short-container {
+            width: 477px;
+            height: 433px;
+            margin-left: 19px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+
+        .category-short {
+            background-color: #F6F6F6;
+            width: 477px;
+            height: 208px;
+            overflow: hidden;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .planters-category {
+            width: 157px;
+            height: 146px;
+            background-color: #D1E5CD;
+            margin: 0 30px 30px 0;
+        }
+
+        .planters-category img {
+            transform: scaleX(-1);
+            width: 158px;
+            margin: -20px 0 0 -9px;
+        }
+
+        .category-long, .category-short {
+            transition: .3s;
+        }
+        .category-long:hover, .category-short:hover {
+            box-shadow: 0 0 7px rgba(33,33,33,.2); 
+            cursor: pointer;
+        }
+
+        .category-long:hover .arrow-circle {
+            animation-name: hover;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        .category-short:hover .arrow-circle {
+            animation-name: hover;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+
+        .arrow-category-1, .arrow-category-2 {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            margin: 0 0 15px 20px;
+        }
+
+        .arrow-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D1E5CD;
+            border-radius: 30px;
+            width: 40px;
+            height: 40px;
+            margin: 0 0 0 100px;
+        }
+
+        .arrow-category-1 svg {
+            margin: 0 0 -28px -95px;
+            z-index: 0;
+        }
+
+        .arrow-category-2 svg {
+            margin: 0 0 -28px -45px;
+            z-index: 0;
+        }
+
+        .arrow-category-2 .arrow-circle {
+            margin: 0 0 0 150px;
+        }
         
-    .arrow-button div:hover {
-        animation-name: cart-hover;
-        animation-duration: 0.4s;
-        animation-fill-mode: forwards;
-    }
+        .homegoods-category {
+            width: 157px;
+            height: 146px;
+            background-color: #D1E5CD;
+            margin: 0 30px 30px 0;
+        }
 
-    .arrow-button svg {
-        position: absolute;
-        fill: #303531;
-        margin-left: -75px;
-    }
-
-    .main-img {
-        min-width: 460px;
-        height: 580px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #D1E5CD;
-
-    }
-
-    .main-img img {
-        position: absolute;
-        width: 653px;
-        height: 812px;
-        margin: 0 0 -10px 0;
-    }
-
-/* SHOP CATEGORIES */
-
-.category-container {
-    width: 954px;
-    margin: 90px 20% 0 20%;
-    outline: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.category-container h2 {
-    position: absolute;
-    margin-top: -45px;
-}
-
-.category-long, .category-short-container {
-    width: 477px;
-    height: 433px;
-}
-.category-long, .category-short {
-    background-color: #F6F6F6;
-}
-
-.category-short-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-}
-
-.category-short {
-    outline: auto;
-    width: 464px;
-    height: 208px;
-}
-
-
-
-
-
+        .homegoods-category img {
+            width: 210px;
+            margin: -30px 0 0 -20px;
+        }
 
 
     /* RESIZE */
@@ -429,7 +540,27 @@ body {
             transform: translateY(-8px) rotate(-45deg);
         }
 
-        .main-img, img {
+        .main-img, .main-img img {
             display: none;
-        }
+        }    
+ }
+
+ @media only screen and (max-width: 800px) {
+    main {
+        display: none;
+    }
+
+    .category-container {
+        width: fit-content;
+        margin-top: 100px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .category-short-container {
+        margin: 20px 0 0 0;
+    }
+
+
+
  }
