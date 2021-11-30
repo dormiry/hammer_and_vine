@@ -7,7 +7,16 @@
     <title>Hammer + Vine</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/animations.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css">
+    <script type="text/javascript" src="js/script.js"></script> 
+    <!-- <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script> -->
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+    <script src="js/flickity.pkgd.min.js"></script>
+
+
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -76,9 +85,8 @@
                             <img src="images/planters.png">
                         </div>
                 </a>
-
-                </div>
-                <div class="category-short-container">
+            </div>
+            <div class="category-short-container">
                 <a class="category-link" href="shop-planters.html">
                     <div class="category-short">
                         <div class="arrow-category-1">
@@ -108,46 +116,125 @@
                         </div>
                     </div>
                 </a>
-                    </div>
-                </div>
             </div>
+        </div>
+    
+        <!-- FEATURED COLLECTION -->
+        <div class="homepage-content">
+            <div class="section-text"><h2>Featured Collection</h2> <a href="shop.html"><p>View all products</p></a></div>
+                <div class="main-carousel">
 
-    </div>
+                    <!-- PRODUCT A -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/monstera-deliciosa.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Monstera Deliciosa (6in)</b></p><p>$28</p></div>
+                    </div>     
+
+                    <!-- PRODUCT B -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/succulents.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Succulent (2in)</b></p><p>$4</p></div>
+                    </div> 
+
+                    <!-- PRODUCT C -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/crispy_wave_fern.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Crispy Wave Fern</b></p><p>$12</p></div>
+                    </div> 
+
+                    <!-- PRODUCT D -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/Pilea_Peperomiodes.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Pilea Peperomiodes</b></p><p>$18</p></div>
+                    </div> 
+
+                    <!-- PRODUCT E -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/string-of-pearls.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>String of Pearls</b></p><p>$15</p></div>
+                    </div> 
+
+                    <!-- PRODUCT F -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/scindapsus_pictus.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Scindapsus Pictus</b></p><p>$15</p></div>
+                    </div> 
+                    
+                     <!-- PRODUCT G -->
+                     <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/watermelon-peperomia.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Watermelon Peperomia</b></p><p>$12</p></div>
+                    </div> 
+                    
+                     <!-- PRODUCT H -->
+                     <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/monstera-adansonii.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Monstera Adansonii</b></p><p>$15</p></div>
+                    </div> 
+                    
+                    <!-- PRODUCT  -->
+                    <div class="carousel-cell">
+                        <div class="slide-img"><img src="images/monstera-deliciosa.png">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Details</a>	
+                            </div>
+                        </div>
+                        <div class="detail-box"><p><b>Tradescantia 'Nanouk'</b></p><p>$6</p></div>
+                    </div> 
+                   
 
 
-        <!--  JAVASCIPT -->
+            </div>
+        </div>
 
-        <!-- Nav Shadow on Scroll -->
+
+        <!-- JQUERY -->
         <script>
-            window.addEventListener('scroll',(e)=>{
-              const nav = document.querySelector('.navbar');
-              if(window.pageYOffset>0){
-                nav.classList.add("add-shadow");
-              }else{
-                nav.classList.remove("add-shadow");
-              }
+           var elem = document.querySelector('.main-carousel');
+            var flkty = new Flickity( elem, {
+                groupCells: true,
+                cellAlign: 'left',
+                contain: true
             });
-          </script>
 
-          <!-- Hamburger Menu -->
-          <script>
-                const hamburger = document.querySelector(".hamburger");
-                const navMenu = document.querySelector("ul");
-                const navLink = document.querySelectorAll("li");
+            // element argument can be a selector string
+            //   for an individual element
+            var flkty = new Flickity( '.main-carousel', {
 
-                hamburger.addEventListener("click", mobileMenu);
-                navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-                function mobileMenu() {
-                    hamburger.classList.toggle("active");
-                    navMenu.classList.toggle("active");
-                }
-
-                function closeMenu() {
-                    hamburger.classList.remove("active");
-                    navMenu.classList.remove("active");
-                }
-          </script>
+            });
+        </script>
 </body>
 </html>
 
