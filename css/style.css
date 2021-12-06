@@ -87,7 +87,6 @@
 body {
     background-color: #FFFFFF;
     width: 100%;
-    height: 4440px;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -657,31 +656,33 @@ body {
 
         .insta-container {
             width: 973px;
+            height: fit-content;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
             align-items: flex-start;
-            
-            margin-top: 150px;
-            outline: auto;
+            margin-top: 180px;
+            row-gap: 8px;
         }
 
-        .insta-container h2 {
+        .followlink {
             position: absolute;
+            width: 973px;
             margin-top: -45px;
+        }
+
+        .followlink a {
+            text-decoration: none;
         }
 
         .insta-box {
             height: 237px;
             width: 237px;
-            
         }
 
         .insta-box img {
             max-height: 238px;
             max-width: 238px;
-            z-index: 10;
-            
         }
 
         .insta-box a {
@@ -689,10 +690,10 @@ body {
             margin:0;
         }
         
-
         .post-info {
             background-color: #30353180;
             transform: translate(0, -101.9%);
+            position: absolute;
             width:100%;
             width: 238px;
             height: 238px;
@@ -734,6 +735,78 @@ body {
         .insta-box:hover .post-info {
             visibility: visible;
         }
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 309px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.footer-text {
+    width: 973px;
+    padding-top: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 8px;
+}
+
+.info {
+    width: 933px;
+    display:  flex;
+    flex-flow: row wrap;
+}
+
+.info h4 {
+    width: 880px;
+    margin-bottom: 15px;
+}
+
+.info p {
+    margin: 0 70px 20px 0;
+}
+
+.copyright {
+    width: 973px;
+    height: 60px;
+    padding-top: 15px;
+    border-top-style: solid;
+    border-top-color: #BCC1BC;
+    border-top-width: 1px;
+}
+
+
+
+.insta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D1E5CD;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    margin-top: -3px;
+}
+
+.insta-button:hover {
+    animation-name: hover;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.insta-button svg {
+    fill:#303531;
+    height: 17px;
+}
 
 
     /* RESIZE */
